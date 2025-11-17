@@ -1,4 +1,4 @@
-package src.main.java.br.com.gestorfinanceiro.model;
+package gestorfinanceiro.model.usuario;
 import java.util.ArrayList;
 import java.util.List;
 

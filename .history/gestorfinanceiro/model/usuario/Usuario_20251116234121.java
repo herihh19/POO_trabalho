@@ -1,4 +1,6 @@
-package src.main.java.br.com.gestorfinanceiro.model;
+package gestorfinanceiro.model.usuario;
+
+
 public abstract class Usuario {
     private static int proximoId = 1;
     private int id;
