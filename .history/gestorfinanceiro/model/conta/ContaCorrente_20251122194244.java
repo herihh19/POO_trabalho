@@ -1,0 +1,7 @@
+package gestorfinanceiro.model.conta;
+
+public class ContaCorrente extends ContaFinanceira {
+    private dou
+
+    
+}
