@@ -1,7 +1,6 @@
 package gestorfinanceiro;
 import gestorfinanceiro.model.usuario.UsuarioIndividual;
 import gestorfinanceiro.model.usuario.Grupo;
-import gestorfinanceiro.model.conta.ContaFinanceira;
 import gestorfinanceiro.model.conta.ContaCorrente;
 import gestorfinanceiro.model.conta.ContaPoupanca;
 import gestorfinanceiro.model.conta.CartaoCredito;
@@ -45,19 +44,8 @@ public class Main{
         System.out.println("Cartao de credito com limite  de R$ " + credito.getSaldo());
 
         ContaFinanceira contaFactory1 = ContaFactory.criarConta("corrente", "Itau", 1000);
-        if (contaFactory1 != null){
-            gerenciador.adicionarConta(contaFactory1);
-            contaFactory1.depositar(100);
-        }
-        ContaFinanceira contaFactory2 = ContaFactory.criarConta("poupanca", "Pupanca BB",800);
-        if (contaFactory2 != null){
-            gerenciador.adicionarConta(contaFactory2);
-        }
-        ContaFinanceira contaFactory3 = ContaFactory.criarConta("credito", "Mastercard", 1000);
-        if (contaFactory3 != null){
-            gerenciador.adicionarConta(contaFactory3);
-            contaFactory3.sacar(200);
-        }
+        
+
         System.out.println("Total de usuarios: " + gerenciador.getUsuarios().size());
         System.out.println("Total de contas: " + gerenciador.getContas().size());
     

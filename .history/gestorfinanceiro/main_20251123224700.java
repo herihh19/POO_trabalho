@@ -1,7 +1,6 @@
 package gestorfinanceiro;
 import gestorfinanceiro.model.usuario.UsuarioIndividual;
 import gestorfinanceiro.model.usuario.Grupo;
-import gestorfinanceiro.model.conta.ContaFinanceira;
 import gestorfinanceiro.model.conta.ContaCorrente;
 import gestorfinanceiro.model.conta.ContaPoupanca;
 import gestorfinanceiro.model.conta.CartaoCredito;
@@ -53,11 +52,9 @@ public class Main{
         if (contaFactory2 != null){
             gerenciador.adicionarConta(contaFactory2);
         }
-        ContaFinanceira contaFactory3 = ContaFactory.criarConta("credito", "Mastercard", 1000);
-        if (contaFactory3 != null){
-            gerenciador.adicionarConta(contaFactory3);
-            contaFactory3.sacar(200);
-        }
+        ContaFinanceira contaFactory3 = ContaFactory.criarConta("credito", "Mastercard", )
+
+
         System.out.println("Total de usuarios: " + gerenciador.getUsuarios().size());
         System.out.println("Total de contas: " + gerenciador.getContas().size());
     

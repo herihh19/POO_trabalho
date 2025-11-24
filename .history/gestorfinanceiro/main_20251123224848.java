@@ -1,7 +1,6 @@
 package gestorfinanceiro;
 import gestorfinanceiro.model.usuario.UsuarioIndividual;
 import gestorfinanceiro.model.usuario.Grupo;
-import gestorfinanceiro.model.conta.ContaFinanceira;
 import gestorfinanceiro.model.conta.ContaCorrente;
 import gestorfinanceiro.model.conta.ContaPoupanca;
 import gestorfinanceiro.model.conta.CartaoCredito;
