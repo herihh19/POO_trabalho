@@ -1,0 +1,12 @@
+Data do salvamento: 2025-11-24T16:02:52.179800
+Usuarios:
+- Herica Becker (ID: 1)
+- Republica teste (ID: 2)
+Contas:
+- Nubank | Tipo: ContaCorrente | Saldo: R$-150.0
+- Minha poupanca | Tipo: ContaPoupanca | Saldo: R$100.0
+- Visa | Tipo: CartaoCredito | Saldo: R$600.0
+- Itau | Tipo: ContaCorrente | Saldo: R$100.0
+- Pupanca BB | Tipo: ContaPoupanca | Saldo: R$800.0
+- Mastercard | Tipo: CartaoCredito | Saldo: R$800.0
+Saldo total do Sistema: R$2250.0

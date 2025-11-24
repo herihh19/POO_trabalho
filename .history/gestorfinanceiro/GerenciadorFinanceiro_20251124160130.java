@@ -42,15 +42,17 @@ public class GerenciadorFinanceiro{
         }
         return total;
     }
-    public void salvarDados(){
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("dados_banco.bin"))){
+    public void salvarDados() {
+        // Parte 1: Salva o Binário
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("dados_banco.bin"))) {
             out.writeObject(this.usuarios);
             out.writeObject(this.contas);
             System.out.println("Dados salvos com sucesso");
-        } catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Erro ao salvar dados: " + e.getMessage());
         }
-    
+
+        // Parte 2: Salva o Texto (Agora está dentro do método e com catch!)
         try (PrintWriter writer = new PrintWriter("relatorio_backup.txt")) {
             writer.println("Data do salvamento: " + java.time.LocalDateTime.now());
             writer.println("Usuarios:");

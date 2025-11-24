@@ -50,23 +50,27 @@ public class GerenciadorFinanceiro{
         } catch (IOException e){
             System.out.println("Erro ao salvar dados: " + e.getMessage());
         }
-    
         try (PrintWriter writer = new PrintWriter("relatorio_backup.txt")) {
+            writer.println("=== BACKUP LEGÍVEL DO SISTEMA ===");
             writer.println("Data do salvamento: " + java.time.LocalDateTime.now());
-            writer.println("Usuarios:");
+            writer.println("--------------------------------");
+            
+            writer.println("USUARIOS CADASTRADOS:");
             for (Usuario u : usuarios) {
                 writer.println("- " + u.getNome() + " (ID: " + u.getId() + ")");
             }
-            writer.println("Contas:");
+            
+            writer.println("--------------------------------");
+            writer.println("CONTAS BANCÁRIAS:");
             for (ContaFinanceira c : contas) {
                 writer.println("- " + c.getNome() + " | Tipo: " + c.getClass().getSimpleName() + " | Saldo: R$" + c.getSaldo());
             }
-            writer.println("Saldo total do Sistema: R$" + saldoGlobal());
-            System.out.println("Relatorio salvo em 'relatorio_backup.txt'");
-        } catch (FileNotFoundException e) {
-            System.out.println("Erro ao gerar relatorio: " + e.getMessage());
-        }
-    }
+            
+            writer.println("--------------------------------");
+            writer.println("Saldo Total do Sistema: R$" + saldoGlobal());
+            
+            System.out.println("[Persistencia] Relatório TEXTO salvo em 'relatorio_backup.txt'");
+    }    
         @SuppressWarnings("unchecked")
         public void carregarDados(){
             File arquivo = new File("dados_banco.bin");

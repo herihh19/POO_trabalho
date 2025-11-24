@@ -50,7 +50,7 @@ public class GerenciadorFinanceiro{
         } catch (IOException e){
             System.out.println("Erro ao salvar dados: " + e.getMessage());
         }
-    
+        
         try (PrintWriter writer = new PrintWriter("relatorio_backup.txt")) {
             writer.println("Data do salvamento: " + java.time.LocalDateTime.now());
             writer.println("Usuarios:");
@@ -63,10 +63,7 @@ public class GerenciadorFinanceiro{
             }
             writer.println("Saldo total do Sistema: R$" + saldoGlobal());
             System.out.println("Relatorio salvo em 'relatorio_backup.txt'");
-        } catch (FileNotFoundException e) {
-            System.out.println("Erro ao gerar relatorio: " + e.getMessage());
-        }
-    }
+        }    
         @SuppressWarnings("unchecked")
         public void carregarDados(){
             File arquivo = new File("dados_banco.bin");
@@ -83,3 +80,4 @@ public class GerenciadorFinanceiro{
             }
         }
     }
+}
